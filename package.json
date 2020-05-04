@@ -1,7 +1,7 @@
 {
   "name": "cheesenan",
-  "version": "0.0.2",
-  "description": "CheeseNaN allows you to truly test if a variable isNaN",
+  "version": "0.0.3",
+  "description": "CheeseNaN allows you to truly test if a variable is NaN",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {

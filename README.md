@@ -1,5 +1,7 @@
 # cheesenan
-CheeseNaN allows you to truly test if a variable isNaN 
+CheeseNaN allows you to truly test if a variable is a number or not.
+There is a pun intended.
+You might as well use `Number.isFinite` or `Lodash` tbh.
 
 ## isNaN() is broken
 
@@ -22,7 +24,7 @@ isNaN({} + []) // should be equivalent to isNaN(0), but returns true instead
 isNaN([] + {}) // true
 ```
 
-## Number.isNaN() is broken
+## Number.isNaN() is (less) broken
 
 ```javascript
 Number.isNaN('') // false
@@ -65,10 +67,12 @@ cheeseNaN(false) // true
 cheeseNaN([]) // true
 cheeseNaN({}) // true
 
-{} + [] // 0
-cheeseNaN({} + []) // should be equivalent to isNaN(0), but returns true instead
-[] + {} // "[object Object]"
+cheeseNaN({} + []) // true
 cheeseNaN([] + {}) // true
 
 cheeseNaN(NaN) // true
 ```
+
+## What's next
+
+- Dunno. Maybe doing something actually usefull?

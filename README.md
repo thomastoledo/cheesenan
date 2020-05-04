@@ -46,6 +46,29 @@ Number.isNaN([] + {}) // false
 ## So here's a convenient test
 
 ```javascript
-let value = // whatever you want
-console.log(cheeseNaN(value));
+function cheeseNaN(value) {
+    return typeof value !== 'number' || Number.isNaN(value);
+}
+```
+
+And now you can do 
+```javascript
+cheeseNaN('') // true
+cheeseNaN(' ') // true
+
+cheeseNaN(null) // true
+cheeseNaN(undefined) // true
+
+cheeseNaN(true) // true
+cheeseNaN(false) // true
+
+cheeseNaN([]) // true
+cheeseNaN({}) // true
+
+{} + [] // 0
+cheeseNaN({} + []) // should be equivalent to isNaN(0), but returns true instead
+[] + {} // "[object Object]"
+cheeseNaN([] + {}) // true
+
+cheeseNaN(NaN) // true
 ```

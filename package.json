@@ -1,6 +1,6 @@
 {
   "name": "cheesenan",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "CheeseNaN allows you to truly test if a variable isNaN",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -13,11 +13,10 @@
     "url": "git+https://github.com/nugetchar/cheesenan.git"
   },
   "keywords": [
-    "crescendo",
+    "isNaN",
     "javascript",
-    "forms",
-    "messages",
-    "errors"
+    "number",
+    "NaN"
   ],
   "author": "Thomas Toledo-Pierre <nugetchar@gmail.com> (https://twitter.com/ttoledo_js)",
   "license": "ISC",

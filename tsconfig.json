@@ -4,6 +4,7 @@
     "module": "ESNext",                     /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', 'es2020', or 'ESNext'. */
     "declaration": true,                   /* Generates corresponding '.d.ts' file. */
     "outDir": "./dist",                        /* Redirect output structure to the directory. */
+    "lib": ["ESNext"],
     "strict": true,                           /* Enable all strict type-checking options. */
     "esModuleInterop": true,                  /* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'. */
     "forceConsistentCasingInFileNames": true  /* Disallow inconsistently-cased references to the same file. */

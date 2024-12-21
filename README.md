@@ -1,182 +1,134 @@
-# 🧀 CheeseNaN
-
-**CheeseNaN** is a lightweight library for robust numeric validations. It enhances standard functions like `isNaN` and provides advanced utilities to validate numeric properties, such as integers, floats, powers, perfect squares, prime numbers, and more.
+### **README for CheeseNaN**
 
 ---
 
-## 🚀 Features
+# **CheeseNaN**
 
-- **Robust `NaN` detection**: A better alternative to `isNaN` and `Number.isNaN`.
-- **Advanced numeric tests**:
-  - Check if a value is a valid number, an integer, or a float.
-  - Detect positive, negative, or non-zero numbers.
-  - Identify powers of \( n \), perfect squares, or prime numbers.
-- **Array utilities**: Validate if all or some values are numbers.
-- **Handles edge cases**: Works with \( Infinity \), \( -Infinity \), and non-numeric values.
+CheeseNaN is a lightweight and versatile utility library for robust number validation in JavaScript and TypeScript. It simplifies working with numbers by providing a suite of functions to handle edge cases, perform checks, and validate mathematical properties.
 
 ---
 
-## 📦 Installation
+## **Features**
 
-Install the library via npm:
+- 🧀 **Robust NaN checks**: Beyond `isNaN` and `Number.isNaN`.
+- 🧮 **Comprehensive number tests**: Positive, negative, zero, even, odd, integers, floats.
+- 📐 **Mathematical utilities**: Prime numbers, powers of `n`, perfect squares.
+- 🎛 **Custom checks**: Validate ranges, divisibility, and more.
+
+---
+
+## **Installation**
+
+Install via **npm** or **yarn**:
 
 ```bash
 npm install cheesenan
 ```
 
-Or with yarn:
-
-```bash
-yarn add cheesenan
-```
-
 ---
 
-## 🔧 Usage
+## **Usage**
 
-### Import the library
-
+### **Basic Checks**
 ```typescript
-import {
-  cheeseNaN,
-  cheeseValidNumber,
-  cheeseInteger,
-  cheeseFloat,
-  cheeseNonZeroNumber,
-  cheesePositive,
-  cheeseNegative,
-  cheeseCanBeNumber,
-  cheeseAllAreNumbers,
-  cheeseSomeAreNaN,
-  cheeseEven,
-  cheeseOdd,
-  cheesePowerOfN,
-  cheesePrime,
-  cheeseWithinRange,
-  cheeseDivisibleBy,
-  cheesePerfectSquare,
-  cheeseInfinite,
-} from 'cheese-nan';
-```
+import { cheeseNaN, cheeseValidNumber, cheeseInteger } from 'cheesenan';
 
----
-
-### 🔹 **Basic Examples**
-
-#### Check if a value is `NaN`:
-
-```typescript
 console.log(cheeseNaN(NaN)); // true
-console.log(cheeseNaN(42)); // false
-console.log(cheeseNaN('string')); // true
-```
-
-#### Check if a value is a valid number:
-
-```typescript
 console.log(cheeseValidNumber(42)); // true
-console.log(cheeseValidNumber(Infinity)); // false
-console.log(cheeseValidNumber(NaN)); // false
-```
-
-#### Check if a value is an integer or a float:
-
-```typescript
-console.log(cheeseInteger(42)); // true
 console.log(cheeseInteger(42.5)); // false
-
-console.log(cheeseFloat(42.5)); // true
-console.log(cheeseFloat(42)); // false
 ```
 
----
-
-### 🔹 **Advanced Tests**
-
-#### Check if a value is a power of \( n \):
-
+### **Advanced Checks**
 ```typescript
-console.log(cheesePowerOfN(16, 2)); // true (2^4)
-console.log(cheesePowerOfN(27, 3)); // true (3^3)
-console.log(cheesePowerOfN(0.125, -3)); // true (2^-3)
-console.log(cheesePowerOfN(0, 2)); // true (0^2 = 0)
-console.log(cheesePowerOfN(0, -2)); // false (undefined)
-```
+import { cheesePrime, cheeseWithinRange, cheesePowerOfN } from 'cheesenan';
 
-#### Check if a value is a prime number:
-
-```typescript
 console.log(cheesePrime(7)); // true
-console.log(cheesePrime(10)); // false
-console.log(cheesePrime(1_000_000_003)); // true
+console.log(cheeseWithinRange(10, 5, 15)); // true
+console.log(cheesePowerOfN(16, 2)); // true (16 is 2^4)
+console.log(cheesePowerOfN(27, 3)); // true (27 is 3^3)
 ```
 
-#### Check if a value is within a given range:
-
+### **Working with Arrays**
 ```typescript
-console.log(cheeseWithinRange(5, 1, 10)); // true
-console.log(cheeseWithinRange(15, 1, 10)); // false
-```
+import { cheeseAllAreNumbers, cheeseSomeAreNaN } from 'cheesenan';
 
-#### Check for perfect squares:
-
-```typescript
-console.log(cheesePerfectSquare(16)); // true (4^2)
-console.log(cheesePerfectSquare(15)); // false
-```
-
-#### Check divisibility:
-
-```typescript
-console.log(cheeseDivisibleBy(10, 2)); // true
-console.log(cheeseDivisibleBy(10, 3)); // false
-```
-
-#### Check infinite values:
-
-```typescript
-console.log(cheeseInfinite(Infinity)); // true
-console.log(cheeseInfinite(-Infinity)); // true
-console.log(cheeseInfinite(42)); // false
-```
-
----
-
-### 🔹 **Array Utilities**
-
-#### Validate if all values are numbers:
-
-```typescript
 console.log(cheeseAllAreNumbers([1, 2, 3])); // true
-console.log(cheeseAllAreNumbers([1, 'string', NaN])); // false
-```
-
-#### Check if some values are `NaN`:
-
-```typescript
-console.log(cheeseSomeAreNaN([1, 2, NaN])); // true
-console.log(cheeseSomeAreNaN([1, 2, 3])); // false
+console.log(cheeseSomeAreNaN([1, NaN, 3])); // true
 ```
 
 ---
 
-## 🧪 Testing
+## **API Reference**
 
-Cheese-NaN comes with a comprehensive test suite. Run the tests with:
+### **Number Validation**
+- `cheeseNaN(value: any): boolean`  
+  Returns `true` if the value is `NaN` or not a number.
 
-```bash
-npm test
-```
+- `cheeseValidNumber(value: any): boolean`  
+  Returns `true` if the value is a finite number.
 
-The test suite covers:
+- `cheeseInteger(value: any): boolean`  
+  Returns `true` if the value is an integer.
 
-- Robust `NaN` detection.
-- Validation of numeric properties: integers, floats, powers, etc.
-- Handling edge cases like \( Infinity \), \( -Infinity \), and non-numeric values.
-- Array-specific utilities.
+- `cheeseFloat(value: any): boolean`  
+  Returns `true` if the value is a finite float (non-integer).
+
+- `cheeseNonZeroNumber(value: any): boolean`  
+  Returns `true` if the value is a non-zero number.
 
 ---
 
-## 📜 License
+### **Mathematical Properties**
+- `cheesePositive(value: any): boolean`  
+  Returns `true` if the value is a positive number.
 
-**MIT**
+- `cheeseNegative(value: any): boolean`  
+  Returns `true` if the value is a negative number.
+
+- `cheesePrime(value: any): boolean`  
+  Returns `true` if the value is a prime number.
+
+- `cheesePowerOfN(value: any, n: number): boolean`  
+  Returns `true` if the value is a power of `n`.
+
+- `cheesePerfectSquare(value: any): boolean`  
+  Returns `true` if the value is a perfect square.
+
+---
+
+### **Range and Divisibility**
+- `cheeseWithinRange(value: any, min: number, max: number): boolean`  
+  Returns `true` if the value is within the range `[min, max]`.
+
+- `cheeseDivisibleBy(value: any, divisor: number): boolean`  
+  Returns `true` if the value is divisible by the given divisor.
+
+---
+
+### **Working with Arrays**
+- `cheeseAllAreNumbers(values: any[]): boolean`  
+  Returns `true` if all elements in the array are valid numbers.
+
+- `cheeseSomeAreNaN(values: any[]): boolean`  
+  Returns `true` if at least one element in the array is `NaN`.
+
+---
+
+## **Roadmap**
+
+1. **Performance Optimization**: Improve speed for large datasets (e.g., prime number checks).
+2. **Extended Mathematical Utilities**: Add functions for Fibonacci checks, GCD/LCM, etc.
+3. **Type-safe Input Validation**: Enhance TypeScript support with stricter typings.
+4. **Integration**: Provide plugins for frameworks like React or Vue for runtime validation.
+
+---
+
+## **Contributing**
+
+Contributions are welcome! Feel free to submit issues or pull requests.
+
+---
+
+## **License**
+
+Licensed under the [MIT License](./LICENSE).

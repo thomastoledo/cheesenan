@@ -1,0 +1,16 @@
+{
+  "name": "cheesenan-web-example",
+  "version": "1.0.0",
+  "description": "Example for using CheeseNaN in a frontend application",
+  "private": true,
+  "devDependencies": {
+    "typescript": "^5.7.2",
+    "vite": "^4.0.0"
+  },
+  "scripts": {
+    "start": "vite"
+  },
+  "dependencies": {
+  "cheesenan": "file:../../dist/esm"
+}
+}

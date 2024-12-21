@@ -17,7 +17,7 @@ import {
     cheeseDivisibleBy,
     cheesePerfectSquare,
     cheeseInfinite,
-} from './cheese-nan';
+} from './cheesenan';
 
 describe('cheeseNaN Library', () => {
     describe('cheeseNaN', () => {

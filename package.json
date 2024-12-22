@@ -1,6 +1,6 @@
 {
   "name": "cheesenan",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "CheeseNaN is a utility library for robust number validation in JavaScript and TypeScript, including precise NaN checks, mathematical utilities, and range validations.",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",

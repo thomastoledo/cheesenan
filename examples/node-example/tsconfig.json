@@ -1,12 +1,10 @@
 {
   "compilerOptions": {
     "target": "ES2015",
-    "module": "NodeNext",
-    "moduleResolution": "nodenext",
-    "esModuleInterop": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
     "strict": true,
-    "baseUrl": ".",
-    "outDir": "./dist"
+    "esModuleInterop": true
   },
   "include": ["index.ts"]
 }

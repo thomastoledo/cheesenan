@@ -11,6 +11,6 @@
     "start": "vite"
   },
   "dependencies": {
-  "cheesenan": "file:../../dist/esm"
-}
+    "cheesenan": "file:../../dist/esm"
+  }
 }

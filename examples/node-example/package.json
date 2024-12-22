@@ -1,0 +1,16 @@
+{
+  "name": "node-example",
+  "version": "1.0.0",
+  "description": "Example for using this lib in a Node.js application",
+  "private": true,
+  "dependencies": {
+    "cheesenan": "file:../../dist/cjs"
+  },
+  "devDependencies": {
+    "tsimp": "^2.0.12",
+    "typescript": "^5.7.2"
+  },
+  "scripts": {
+    "start": "tsimp index.ts"
+  }
+}

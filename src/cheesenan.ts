@@ -26,7 +26,6 @@ export function cheeseNegative(value: any): boolean {
     return cheeseValidNumber(value) && value < 0;
 }
 
-// TODO à tester avec cheeseNaN
 export function cheeseCanBeNumber(value: any): boolean {
     return !Number.isNaN(Number(value));
 }

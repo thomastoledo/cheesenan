@@ -25,6 +25,11 @@ Install via **npm** or **yarn**:
 npm install cheesenan
 ```
 
+Or use a CDN for vanilla projects:
+```js
+import * as cheesenan from 'https://unpkg.com/statello@latest/dist/cheesenan.min.js'
+```
+
 ---
 
 ## **Usage**
